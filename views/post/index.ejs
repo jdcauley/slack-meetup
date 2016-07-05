@@ -1,0 +1,9 @@
+<% console.log(posts); %>
+
+Posts Go Here
+
+<% _.each(posts, function(post){ %>
+  <div class="post">
+    <%- post.postContent %>
+  </div>
+<% }); %>

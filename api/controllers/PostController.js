@@ -7,17 +7,16 @@
 
 module.exports = {
 
-	// getPosts: function(params, callback){
-	//
-	// 	Posts.find().exec(function(err, posts){
-	// 		if(err){
-	// 			res.json(err);
-	// 		}
-	// 		if(posts){
-	// 			res.json(posts);
-	// 		}
-	// 	});
+  index: function(req, res){
 
-	}
+    Post.find().exec(function(err, posts){
+
+      if(posts){
+        res.view({
+          posts: posts
+        });
+      }
+    });
+  }
 
 };
